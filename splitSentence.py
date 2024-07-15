@@ -17,15 +17,12 @@ function copyToClipboard() {{
 
 
     import re
-
     sentences = re.split(r'(?<=\.)\s+', text.strip())
 
     for i, sentence in enumerate(sentences):
-    print(f"S{i+1} = '''{sentence}'''")
+        print(f"S{i+1} = '''{sentence}'''")
 
     from IPython.display import display, HTML
-
-
 
 
     output_text = "\n".join([f"S{i+1} = '''{sentence}'''" for i, sentence in enumerate(sentences)])
@@ -34,9 +31,4 @@ function copyToClipboard() {{
 
 # Display the button
     display(HTML(button_html))
-
-
-
-
-
 
