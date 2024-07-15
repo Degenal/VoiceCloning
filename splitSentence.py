@@ -45,6 +45,8 @@ def GetVoicesDir(VOICES_DIR):
 
 
 def moveVoices(VOICES, CUSTOM_VOICE_NAME = "ABDULLAH"):
+
+    import os 
         
     CUSTOM_VOICE_NAME = "ABDULLAH"
     
