@@ -42,3 +42,23 @@ def GetVoicesDir(VOICES_DIR):
           VOICES_DIR + "sample_4.wav",
           VOICES_DIR + "sample_5.wav"
          ]
+
+
+def moveVoices(CUSTOM_VOICE_NAME = "ABDULLAH", VOICES=VOICES):
+        
+    CUSTOM_VOICE_NAME = "ABDULLAH"
+    
+    custom_voice_folder = f"tortoise/voices/{CUSTOM_VOICE_NAME}"
+    
+    # Ensure the directory exists
+    os.makedirs(custom_voice_folder, exist_ok=True)
+    
+    for i, file_path in enumerate(VOICES):
+        with open(file_path, 'rb') as source_file:
+            file_data = source_file.read()
+        with open(os.path.join(custom_voice_folder, f'{i}.wav'), 'wb') as destination_file:
+            destination_file.write(file_data)
+    
+
+
+
