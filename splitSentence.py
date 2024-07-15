@@ -32,7 +32,7 @@ function copyToClipboard() {{
 </script>
 """
 
-display(HTML(button_html))
+    display(HTML(button_html))
 
     
 
