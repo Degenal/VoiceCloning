@@ -22,13 +22,12 @@ function copyToClipboard() {{
     for i, sentence in enumerate(sentences):
         print(f"S{i+1} = '''{sentence}'''")
 
-    from IPython.display import display, HTML
-
-
+    
     output_text = "\n".join([f"S{i+1} = '''{sentence}'''" for i, sentence in enumerate(sentences)])
 
 
 
 # Display the button
+    return button_html
     display(HTML(button_html))
 
