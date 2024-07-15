@@ -44,7 +44,7 @@ def GetVoicesDir(VOICES_DIR):
          ]
 
 
-def moveVoices(CUSTOM_VOICE_NAME = "ABDULLAH", VOICES):
+def moveVoices(VOICES, CUSTOM_VOICE_NAME = "ABDULLAH"):
         
     CUSTOM_VOICE_NAME = "ABDULLAH"
     
