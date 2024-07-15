@@ -55,7 +55,7 @@ def moveVoices(VOICES, CUSTOM_VOICE_NAME = "ABDULLAH"):
     # Ensure the directory exists
     os.makedirs(custom_voice_folder, exist_ok=True)
     
-    for i, file_path in enumerate(_VOICES):
+    for i, file_path in enumerate(VOICES):
         with open(file_path, 'rb') as source_file:
             file_data = source_file.read()
         with open(os.path.join(custom_voice_folder, f'{i}.wav'), 'wb') as destination_file:
