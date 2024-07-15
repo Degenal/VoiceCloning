@@ -1,5 +1,10 @@
 def sentence_split(text):
 
+
+    from IPython.display import display, HTML
+
+    
+
     import re
     sentences = re.split(r'(?<=\.)\s+', text.strip())
 
@@ -27,6 +32,7 @@ function copyToClipboard() {{
 </script>
 """
 
+display(HTML(button_html))
 
     
 
