@@ -29,5 +29,4 @@ function copyToClipboard() {{
 
 # Display the button
     return button_html
-    display(HTML(button_html))
-
+    
