@@ -1,4 +1,16 @@
 def sentence_split(text):
+
+    import re
+    sentences = re.split(r'(?<=\.)\s+', text.strip())
+
+    for i, sentence in enumerate(sentences):
+        print(f"S{i+1} = '''{sentence}'''")
+
+    
+    output_text = "\n".join([f"S{i+1} = '''{sentence}'''" for i, sentence in enumerate(sentences)])
+
+
+
     button_html = f"""
 <button onclick="copyToClipboard()">Copy Output</button>
 <script>
@@ -16,16 +28,7 @@ function copyToClipboard() {{
 """
 
 
-    import re
-    sentences = re.split(r'(?<=\.)\s+', text.strip())
-
-    for i, sentence in enumerate(sentences):
-        print(f"S{i+1} = '''{sentence}'''")
-
     
-    output_text = "\n".join([f"S{i+1} = '''{sentence}'''" for i, sentence in enumerate(sentences)])
-
-
 
 # Display the button
     return button_html
