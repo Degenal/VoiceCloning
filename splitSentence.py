@@ -64,7 +64,7 @@ def moveVoices(VOICES, CUSTOM_VOICE_NAME = "ABDULLAH"):
 
 
 
-def getAudio(text, tts, CUSTOM_VOICE_NAME, voice_samples=voice_samples, conditioning_latents=conditioning_latents, preset="fast"):
+def getAudio(text, tts, CUSTOM_VOICE_NAME, voice_samples, conditioning_latents, preset="fast"):
     
   gen = tts.tts_with_preset(text, voice_samples=voice_samples, conditioning_latents=conditioning_latents,
                             preset=preset)
