@@ -73,9 +73,8 @@ def getAudio(text, tts, CUSTOM_VOICE_NAME, voice_samples, conditioning_latents, 
 
 def DeleteS():
     for i in range(200):
-        str = f"del S{i+1}"
+        var_name = f"S{i+1}"  # Variable name like 'S1', 'S2', etc.
         try:
-            exec(str)
-        except:
-            ...
-
+            del globals()[var_name]  # Delete the variable from the global scope
+        except KeyError:
+            pass  # If the 
