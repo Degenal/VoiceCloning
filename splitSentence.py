@@ -70,3 +70,12 @@ def getAudio(text, tts, CUSTOM_VOICE_NAME, voice_samples, conditioning_latents, 
                             preset=preset)
   torchaudio.save(f'generated-{CUSTOM_VOICE_NAME}.wav', gen.squeeze(0).cpu(), 24000)
 
+
+def DeleteS():
+    for i in range(200):
+        str = f"del S{i+1}"
+        try:
+            exec(str)
+        except:
+            ...
+
