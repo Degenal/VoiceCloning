@@ -71,10 +71,8 @@ def getAudio(text, tts, CUSTOM_VOICE_NAME, voice_samples, conditioning_latents, 
   torchaudio.save(f'generated-{CUSTOM_VOICE_NAME}.wav', gen.squeeze(0).cpu(), 24000)
 
 
-def DeleteS():
-    for i in range(200):
-        var_name = f"S{i+1}"  # Variable name like 'S1', 'S2', etc.
-        try:
-            del globals()[var_name]  # Delete the variable from the global scope
-        except KeyError:
-            pass  # If the 
+
+VOICES_DIR = "/content/VoiceCloning/input/ABDULLAH_2/"
+def getVoiceDir(x):
+    VOICES = [VOICES_DIR + f"sample_{i+1}.wav" for i in range(x)]
+    return 
