@@ -33,15 +33,7 @@ function copyToClipboard() {{
 
 # Display the button
     return button_html
-    
 
-def GetVoicesDir(VOICES_DIR):
-    VOICES = [VOICES_DIR + "sample_1.wav",
-          VOICES_DIR + "sample_2.wav",
-          VOICES_DIR + "sample_3.wav",
-          VOICES_DIR + "sample_4.wav",
-          VOICES_DIR + "sample_5.wav"
-         ]
 
 
 def moveVoices(VOICES, CUSTOM_VOICE_NAME = "ABDULLAH"):
@@ -73,6 +65,7 @@ def getAudio(text, tts, CUSTOM_VOICE_NAME, voice_samples, conditioning_latents, 
 
 
 VOICES_DIR = "/content/VoiceCloning/input/ABDULLAH_2/"
+
 def getVoiceDir(x):
     VOICES = [VOICES_DIR + f"sample_{i+1}.wav" for i in range(x)]
     return 
