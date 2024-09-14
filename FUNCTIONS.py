@@ -68,4 +68,4 @@ VOICES_DIR = "/content/VoiceCloning/input/ABDULLAH_2/"
 
 def getVoiceDir(x):
     VOICES = [VOICES_DIR + f"sample_{i+1}.wav" for i in range(x)]
-    return 
+    return VOICES
