@@ -5,13 +5,60 @@ def sentence_split(text):
     import re
     sentences = re.split(r'(?<=\.)\s+', text.strip())
 
-    for i, sentence in enumerate(sentences):
-        print(f"S{i+1} = '''{sentence}'''")
+    #for i, sentence in enumerate(sentences):
+        #print(f"S{i+1} = '''{sentence}'''")
 
     
+
+    
+    # Function to count the number of words in a sentence
+    def word_count(sentence):
+        return len(sentence.split())
+    
+    # List to hold the adjusted sentences
+    combined_sentences = []
+    current_sentence = ""
+    
+    for sentence in sentences:
+        # If current_sentence is empty, start with the current sentence
+        if not current_sentence:
+            current_sentence = sentence
+        else:
+            # If the combined sentence so far has less than 20 words, add the next sentence
+            if word_count(current_sentence) < 20:
+                current_sentence += " " + sentence
+            else:
+                combined_sentences.append(current_sentence)
+                current_sentence = sentence
+        
+    # Append the last sentence if any remains
+    if current_sentence:
+        combined_sentences.append(current_sentence)
+    
+    # Printing each combined sentence with the desired format
+    for i, sentence in enumerate(combined_sentences):
+        print(f"S{i+1} = '''{sentence}'''")
+
+
+
+
+
+
     output_text = "\n".join([f"S{i+1} = '''{sentence}'''" for i, sentence in enumerate(sentences)])
 
 
+
+
+
+
+
+
+
+
+
+
+
+    
 
     button_html = f"""
 <button onclick="copyToClipboard()">Copy Output</button>
