@@ -111,7 +111,7 @@ def getAudio(text, tts, CUSTOM_VOICE_NAME, voice_samples, conditioning_latents, 
 
 
 
-VOICES_DIR = "/content/VoiceCloning/input/ABDULLAH_2/"
+VOICES_DIR = "/content/VoiceCloning/input/ABDULLAH_3/"
 
 def getVoiceDir(x):
     VOICES = [VOICES_DIR + f"sample_{i+1}.wav" for i in range(x)]
